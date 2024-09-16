@@ -1,0 +1,124 @@
+/* Reset default margin and padding, and ensure consistent box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling: set background image, text color, and center content */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/Backgrounds/background1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes full viewport height */
+}
+
+/* Header styling: center the text and add spacing below */
+header {
+    text-align: center;
+    margin-bottom: 5vh; /* Dynamic margin using viewport height */
+}
+
+/* Header h1: dynamic font size relative to the viewport width */
+header h1 {
+    font-size: 4vw; /* Font size based on viewport width for responsiveness */
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for readability */
+    -webkit-text-stroke: 0.15vw black; /* Add a subtle stroke around the text */
+}
+
+/* Main section: content box with dynamic size, background color, and padding */
+main {
+    background: rgba(82, 137, 87, 0.85); /* Semi-transparent background */
+    padding: 5vh; /* Dynamic padding using viewport height */
+    border-radius: 1.5vw; /* Rounded corners with dynamic size */
+    width: 60vw; /* Dynamic width based on the viewport */
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6); /* Add a shadow for depth */
+}
+
+/* Upload section spacing */
+.upload-section {
+    margin-bottom: 3vh; /* Dynamic margin below the upload section */
+}
+
+/* Button styling: dynamic size, padding, and hover effects */
+button {
+    display: block;
+    width: 85%; /* Button width as a percentage of the container */
+    margin: 2vh auto; /* Dynamic margin with auto center alignment */
+    padding: 2.5vh 3.5vw; /* Dynamic padding using both viewport height and width */
+    background-color: #007F0E;
+    color: white;
+    border: none;
+    border-radius: 1.5vw; /* Rounded corners with dynamic size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+    font-size: 2vw; /* Dynamic font size */
+}
+
+/* File name styling: larger text with shadow and stroke for emphasis */
+#file-name {
+    font-size: 1.6rem; /* Large font size for better visibility */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for contrast */
+    -webkit-text-stroke: 1px black; /* Add a black stroke around the text */
+    margin-top: 10px; /* Space above the text */
+}
+
+/* Button hover effect: change color and slightly enlarge */
+button:hover {
+    background-color: #5AD35A; /* Lighter green on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Hidden class for elements that should not be displayed */
+.hidden {
+    display: none;
+}
+
+/* Animation for result and recycle info: fade in and move up */
+.result, .recycle-info {
+    opacity: 0; /* Initially invisible */
+    transform: translateY(20px); /* Initially shifted down */
+    transition: opacity 3s ease, transform 1.3s ease; /* Smooth transition for visibility and position */
+}
+
+/* Show class: make elements visible and reset their position */
+.show {
+    opacity: 1; /* Make element visible */
+    transform: translateY(0); /* Reset the position */
+}
+
+/* Result text: dynamic size and color with stroke for emphasis */
+.result {
+    margin-top: 3vh;
+    font-size: 4vw; /* Dynamic font size */
+    font-weight: bold;
+    color: #009c17; /* Green text */
+    -webkit-text-stroke: 0.2vw black; /* Add black stroke around the text */
+    text-shadow: none; /* Remove text shadow */
+}
+
+/* Recycling information text: dynamic size and white color with shadow */
+.recycle-info {
+    font-size: 2vw; /* Dynamic font size */
+    color: #ffffff; 
+    margin-top: 2vh;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+}
+
+/* Footer styling: dynamic font size and subtle text shadow */
+footer {
+    margin-top: 5vh; /* Add space above the footer */
+    font-size: 1.5vw; /* Dynamic font size */
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle shadow for contrast */
+    -webkit-text-stroke: 0.05vw #333; /* Subtle stroke around the text */
+}

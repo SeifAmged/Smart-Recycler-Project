@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Recycler</title> <!-- Updated tab title -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icons/icon.png') }}" title="Smart Recycler Icon"> <!-- Tab icon -->
+</head>
+<body>
+    <header>
+        <h1>🌍 Smart Recycler 🌍</h1> <!-- Website header with icons -->
+    </header>
+
+    <main>
+        <!-- Section for the file upload form -->
+        <section class="upload-section">
+            <form id="upload-form" enctype="multipart/form-data">
+                <label for="file" class="hidden">Upload Sample:</label> <!-- Hidden label for accessibility -->
+                <input type="file" name="file" id="file" class="hidden" accept="image/*" required> <!-- File input field, hidden by default -->
+                <button id="upload-sample" type="button" aria-label="Upload a sample image">Upload Sample</button> <!-- Button to trigger file input -->
+                <span id="file-name" style="display: none; color: #fff;"></span> <!-- Placeholder to display the selected file name -->
+                <button type="submit" aria-label="Start classification process">Start Classify</button> <!-- Button to start classification -->
+            </form>
+        </section>
+        
+        <!-- Section for displaying the classification result and recycle information -->
+        <section class="result-section">
+            <div class="result" id="result"></div> <!-- Result of classification -->
+            <div class="recycle-info" id="recycle-info"></div> <!-- Additional recycling information based on the result -->
+        </section>
+    </main>
+
+    <!-- Footer with project information -->
+    <footer>
+        <p>&copy; 2024 Smart Recycler Project By Silicon Dreams Company</p> <!-- Corrected company name -->
+    </footer>
+
+    <!-- Include external JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <script>
+        // JavaScript to display the selected image's file name
+        document.getElementById('file').addEventListener('change', function() {
+            const fileName = this.files[0].name;
+            document.getElementById('file-name').innerText = `Chosen Sample: ${fileName}`; // Show the file name
+            document.getElementById('file-name').style.display = 'block'; // Make the file name visible
+        });
+
+        // Additional interaction code is handled in script.js
+    </script>
+</body>
+</html>
