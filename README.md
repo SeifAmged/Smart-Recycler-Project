@@ -68,14 +68,14 @@
 ## Demo: Analyzing a Recyclable Sample (Plastic)  
 This example demonstrates how Smart Recycler analyzes an uploaded sample. The AI detects that the item is plastic and provides actionable recycling instructions.
 
-![GIF Description](https://github.com/SeifAmged/test/blob/main/Animation.gif)
+![GIF Description](https://github.com/SeifAmged/Smart-Recycler-Project/blob/main/Media/1.gif)
 
 ---
 
 ## Demo: Analyzing a Non-Recyclable Sample  
 In this example, Smart Recycler identifies an item that cannot be recycled. It informs the user and suggests environmentally-friendly disposal methods.
 
-![Non-Recyclable Sample](https://github.com/SeifAmged/test/blob/main/Animation2.gif)
+![Non-Recyclable Sample](https://github.com/SeifAmged/Smart-Recycler-Project/blob/main/Media/2.gif)
 ---
 
 
